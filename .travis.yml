@@ -4,9 +4,9 @@ sudo: required
 language: python
 cache: pip
 install:
-  - pip install ansible-lint
+  - pip install molecule
 script:
-  - ansible-lint  ./tests/travis-playbook.yml
+  - molecule  ./tests/travis-playbook.yml
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
