@@ -6,7 +6,7 @@ cache: pip
 install:
   - pip install molecule
 script:
-  - molecule  ./tests/travis-playbook.yml
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
