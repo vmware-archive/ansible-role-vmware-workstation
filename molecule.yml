@@ -1,0 +1,16 @@
+---
+ansible:
+  verbose: False
+  playbook: tests/playbook.yml
+
+dependency:
+  name: galaxy
+driver:
+  name: docker
+docker:
+  containers:
+    - name: vmware-workstation
+      image: ubuntu
+      image_version: latest
+      ansible_groups:
+        - group1
