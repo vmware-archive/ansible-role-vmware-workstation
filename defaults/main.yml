@@ -5,3 +5,9 @@ workstation_tempdir: /tmp/workstation-downloads
 
 # To set a license key at install time, defined this
 # workstation_license: XXXX-yyyy-XXXX
+
+workstation_extra_packages:
+  - x11-apps
+  - libxtst6
+  - libxinerama1
+  - libxi6

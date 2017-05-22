@@ -6,10 +6,15 @@
     state: directory
     mode: 0755
 
+- name: Check for pre-downloaded binary
+  stat: path="{{ workstation_tempdir }}/tryworkstation-linux-64.sh"
+  register: file_stats
+
 - name: Download workstation
   get_url:
     url: "{{ workstation_download_url }}"
     dest: "{{ workstation_tempdir }}/tryworkstation-linux-64.sh"
+  when: not file_stats.stat.exists
 
 - name: Mark script executable
   file:
@@ -26,3 +31,9 @@
   become: yes
   tags:
     - skip_ansible_lint
+
+- name: Install packages needed by vmware packer build
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ workstation_extra_packages }}"
