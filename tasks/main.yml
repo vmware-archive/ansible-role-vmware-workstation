@@ -37,3 +37,4 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ workstation_extra_packages }}"
+  become: yes

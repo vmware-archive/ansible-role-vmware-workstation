@@ -1,6 +1,6 @@
 ---
 # defaults file for vmware-workstation
-workstation_download_url: https://www.vmware.com/go/tryworkstation-linux-64
+workstation_download_url: https://www.vmware.com/go/getworkstation-linux
 workstation_tempdir: /tmp/workstation-downloads
 
 # To set a license key at install time, defined this
