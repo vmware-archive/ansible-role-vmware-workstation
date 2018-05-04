@@ -1,0 +1,49 @@
+# Copyright © 2018 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT
+---
+galaxy_info:
+  author: Tom Scanlan
+  description: Install VMware Workstation for linux
+  company: VMware
+
+  # If the issue tracker for your role is not on github, uncomment the
+  # next line and provide a value
+  # issue_tracker_url: http://example.com/issue/tracker
+
+  # Some suggested licenses:
+  # - BSD (default)
+  # - MIT
+  # - GPLv2
+  # - GPLv3
+  # - Apache
+  # - CC-BY
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  # If this a Container Enabled role, provide the minimum Ansible Container version.
+  # min_ansible_container_version:
+
+  # Optionally specify the branch Galaxy will use when accessing the GitHub
+  # repo for this role. During role install, if no tags are available,
+  # Galaxy will use this branch. During import Galaxy will access files on
+  # this branch. If Travis integration is configured, only notifications for this
+  # branch will be accepted. Otherwise, in all cases, the repo's default branch
+  # (usually master) will be used.
+  # github_branch:
+
+
+  platforms:
+
+    - name: Ubuntu
+      versions:
+        - trusty
+        - precise
+        - xenial
+
+
+  galaxy_tags:
+    - vmware
+    - virtualization
+
+dependencies: []

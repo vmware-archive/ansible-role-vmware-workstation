@@ -1,26 +1,32 @@
+ansible-role-vmware-workstation
+=========
 
+A role for installing VMware Workstation on Linux
 
-# ansible-role-vmware-workstation
+Requirements
+------------
 
-## Overview
+Requires an internet connection to download the installer.  This can be downloaded separatly if desired.
 
-## Try it out
+Role Variables
+--------------
 
-### Prerequisites
+* **workstation__license** is the license key to use when installing.
 
-* Prereq 1
-* Prereq 2
-* Prereq 3
+Dependencies
+------------
 
-### Build & Run
+None
 
-1. Step 1
-2. Step 2
-3. Step 3
+Example Playbook
+----------------
 
-## Documentation
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-## Releases & Major Branches
+    - hosts: servers
+      roles:
+         - { role: vmware.vmware-workstation, workstation_license: XXX-YYY-XXX }
+
 
 ## Contributing
 
@@ -30,3 +36,5 @@ questions about the CLA process, please refer to our [FAQ](https://cla.vmware.co
 refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
+Copyright © 2018 VMware, Inc. All Rights Reserved.
+SPDX-License-Identifier: MIT
