@@ -1,4 +1,4 @@
-# Copyright © 2018 VMware, Inc. All Rights Reserved.
+# Copyright 2018 VMware, Inc. All Rights Reserved.
 # SPDX-License-Identifier: MIT
 import os
 
