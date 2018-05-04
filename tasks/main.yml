@@ -28,7 +28,7 @@
     --required {{'--set-setting vmware-workstation serialNumber '+ workstation_license if workstation_license is defined else '' }}
   args:
     creates: /usr/bin/vmware
-  become: yes
+  become: true
   tags:
     - skip_ansible_lint
 
@@ -37,4 +37,4 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ workstation_extra_packages }}"
-  become: yes
+  become: true
