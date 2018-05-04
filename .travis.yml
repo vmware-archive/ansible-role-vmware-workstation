@@ -8,8 +8,8 @@ install:
   - pip install molecule
   - pip install docker
 script:
-  - >
-    sed -i.orig 's;  playbook.*;  playbook: tests/travis-playbook.yml;' molecule.yml
+  - mkdir ~/.ansible/roles
+  - ln -s $TRAVIS_BUILD_DIR ~/.ansible/roles/vmware-workstation
   - molecule test
 
 notifications:
