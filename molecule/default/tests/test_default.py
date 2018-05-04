@@ -1,4 +1,5 @@
 # Copyright © 2018 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT
 import os
 
 import testinfra.utils.ansible_runner

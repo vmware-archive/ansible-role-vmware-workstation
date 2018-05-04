@@ -1,4 +1,5 @@
 # Copyright © 2018 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT
 ---
 # defaults file for vmware-workstation
 workstation_download_url: https://www.vmware.com/go/getworkstation-linux
