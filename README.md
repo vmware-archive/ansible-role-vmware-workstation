@@ -34,4 +34,4 @@ The ansible-role-vmware-workstation project team welcomes contributions from the
 
 ## License
 Copyright © 2018 VMware, Inc. All Rights Reserved.
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: MIT OR GPL-3.0-only
