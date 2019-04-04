@@ -1,0 +1,10 @@
+# Copyright © 2019 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT
+---
+# defaults file for vmware-workstation
+workstation_download_url: https://www.vmware.com/go/getworkstation-linux
+workstation_tempdir: /tmp/workstation-downloads
+
+# To set a license key at install time, defined this
+# workstation_license: XXXX-yyyy-XXXX
+
