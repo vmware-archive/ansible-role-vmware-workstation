@@ -1,6 +1,13 @@
 # Copyright © 2018 VMware, Inc. All Rights Reserved.
 # SPDX-License-Identifier: MIT OR GPL-3.0-only
 ---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Setup VMware Workstation Facts
+  set_fact: workstation_extra_packages={{ os_workstation_extra_packages }}
+  when: workstation_extra_packages is undefined and
+        os_workstation_extra_packages is defined
 
 - name: Create temp directory
   file:

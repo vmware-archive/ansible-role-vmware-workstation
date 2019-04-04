@@ -1,0 +1,8 @@
+# Copyright © 2019 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT OR GPL-3.0-only
+---
+os_workstation_extra_packages:
+  - x11-apps
+  - libxtst6
+  - libxinerama1
+  - libxi6
