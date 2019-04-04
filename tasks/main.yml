@@ -49,3 +49,19 @@
   with_items: "{{ workstation_extra_packages }}"
   become: true
   when: workstation_extra_packages is defined
+
+- name: Stat for systemd
+  stat:
+    path: /etc/systemd/system
+  register: systemd_dir
+
+- name: Install systemd services
+  copy:
+    src: "{{ item }}"
+    dest: /etc/systemd/system/
+  with_items:
+    - vmware.service
+    - vmware-usbarbitrator.service
+    - vmware-workstation-server.service
+  when: systemd_dir.stat.exists
+  notify: Reload SystemD Configurations
