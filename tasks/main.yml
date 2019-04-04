@@ -3,6 +3,7 @@
 ---
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
+  ignore_errors: yes
 
 - name: Setup VMware Workstation Facts
   set_fact: workstation_extra_packages={{ os_workstation_extra_packages }}
@@ -47,3 +48,4 @@
     state: present
   with_items: "{{ workstation_extra_packages }}"
   become: true
+  when: workstation_extra_packages is defined

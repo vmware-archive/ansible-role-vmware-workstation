@@ -12,4 +12,7 @@ rules:
   line-length: disable
   # NOTE(retr0h): Templates no longer fail this lint rule.
   #               Uncomment if running old Molecule templates.
-  # truthy: disable
+  # Note: re-enalbed because various modules, systemd for instance
+  #       use 'yes' vs a more truthy value, and there's no good
+  #       way to override
+  truthy: disable
