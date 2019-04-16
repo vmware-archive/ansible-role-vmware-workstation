@@ -1,4 +1,9 @@
 # Copyright © 2018 VMware, Inc. All Rights Reserved.
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MIT OR GPL-3.0-only
 ---
 # handlers file for vmware-workstation
+
+- name: Reload SystemD Configurations
+  systemd:
+    daemon_reload: yes
+  when: ansible_service_mgr == "systemd"

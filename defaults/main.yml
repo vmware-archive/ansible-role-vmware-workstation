@@ -1,5 +1,5 @@
-# Copyright © 2018 VMware, Inc. All Rights Reserved.
-# SPDX-License-Identifier: MIT
+# Copyright © 2019 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: MIT OR GPL-3.0-only
 ---
 # defaults file for vmware-workstation
 workstation_download_url: https://www.vmware.com/go/getworkstation-linux
@@ -7,9 +7,3 @@ workstation_tempdir: /tmp/workstation-downloads
 
 # To set a license key at install time, defined this
 # workstation_license: XXXX-yyyy-XXXX
-
-workstation_extra_packages:
-  - x11-apps
-  - libxtst6
-  - libxinerama1
-  - libxi6
