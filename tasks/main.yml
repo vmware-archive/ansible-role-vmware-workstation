@@ -16,15 +16,17 @@
     state: directory
     mode: 0755
 
-- name: Check for pre-downloaded binary
-  stat: path="{{ workstation_tempdir }}/tryworkstation-linux-64.sh"
-  register: file_stats
+- name: Check VMWare workstation version
+  shell: >
+    vmware --version
+  register: vmware_version
+  ignore_errors: true
 
 - name: Download workstation
   get_url:
     url: "{{ workstation_download_url }}"
     dest: "{{ workstation_tempdir }}/tryworkstation-linux-64.sh"
-  when: not file_stats.stat.exists
+  when: vmware_version.stdout.find(workstation_current_version) == -1
 
 - name: Mark script executable
   file:

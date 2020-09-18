@@ -4,6 +4,7 @@
 # defaults file for vmware-workstation
 workstation_download_url: https://www.vmware.com/go/getworkstation-linux
 workstation_tempdir: /tmp/workstation-downloads
+workstation_current_version: 15.5.6
 
 # To set a license key at install time, defined this
 # workstation_license: XXXX-yyyy-XXXX
